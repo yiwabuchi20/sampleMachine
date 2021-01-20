@@ -42,7 +42,11 @@
                 model = await tmImage.load(URL + 'model.json', URL + 'metadata.json');
                 webcam = new tmImage.Webcam(200, 200, true);
 
-                await webcam.setup();
+                await webcam.setup(
+            {
+                facingMode: &amp;amp;amp;amp;amp;amp;amp;quot;environment&amp;amp;amp;amp;amp;amp;amp;quot;
+            }
+        );
                 webcam.play();
                 webcamBox.appendChild(webcam.canvas);
 
